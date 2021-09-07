@@ -17,8 +17,8 @@ const GithubState = (props) => {
 
   const searchUsers = async searchText => {
     setLoading();
-    // const res = await axios.get(`https://api.github.com/search/users?q=${searchText}`);
-    const res = await axios.get(`http://127.0.0.1:8000/api/search/users?q=${searchText}`);
+    const res = await axios.get(`https://api.github.com/search/users?q=${searchText}`);
+    // const res = await axios.get(`http://127.0.0.1:8000/api/search/users?q=${searchText}`);
     dispatch({
       type: 'SEARCH_USERS',
       payload: res.data
@@ -27,8 +27,8 @@ const GithubState = (props) => {
 
   const getUser = async login => {
     setLoading();
-    // const res = await axios.get(`https://api.github.com/users/${login}`);
-    const res = await axios.get(`http://127.0.0.1:8000/api/users/${login}`);
+    const res = await axios.get(`https://api.github.com/users/${login}`);
+    // const res = await axios.get(`http://127.0.0.1:8000/api/users/${login}`);
     dispatch({
       type: 'GET_USER',
       payload: res.data
@@ -37,8 +37,8 @@ const GithubState = (props) => {
 
   const getRepository = async login => {
     setLoading();
-    // const res = await axios.get(`https://api.github.com/users/${login}/repos`);
-    const res = await axios.get(`http://127.0.0.1:8000/api/users/${login}/repos`);
+    const res = await axios.get(`https://api.github.com/users/${login}/repos`);
+    // const res = await axios.get(`http://127.0.0.1:8000/api/users/${login}/repos`);
     dispatch({
       type: 'GET_REPOSITORY',
       payload: res.data

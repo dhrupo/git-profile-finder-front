@@ -5,7 +5,7 @@ const UserCard = ({ user: { avatar_url, login } }) => {
   let history = useHistory();
 
   const getUserDetails = (login) => {
-    history.push(`/user/${login}`);
+    history.push(`/users/${login}`);
   }
 
   return (
